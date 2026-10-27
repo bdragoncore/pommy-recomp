@@ -1,0 +1,47 @@
+# Input and generated files
+*.z64
+*.elf
+bomberman64u2.build.z64
+RecompiledPatches/
+
+# Build output
+build/
+build-*/
+out/
+n64recomp-build/
+/N64Recomp
+/RSPRecomp
+*.o
+*.obj
+*.exe
+*.dll
+*.lib
+*.pdb
+
+# Patch build intermediates (the generated PatchesLib sources are ignored too)
+patches/*.o
+patches/*.d
+patches/*.map
+patches/patches.bin
+
+# Runtime files
+imgui.ini
+rt64.log
+general.json
+graphics.json
+sound.json
+cheats.json
+mods.json
+mods/
+mod_config/
+saves/
+
+# User-specific files
+.vs/
+.vscode/
+*.user
+x64/
+.DS_Store
+__pycache__/
+*.pyc
+gamecontrollerdb.txt

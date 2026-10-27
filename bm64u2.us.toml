@@ -1,0 +1,118 @@
+# Config file for Bomberman 64: The Second Attack! (US 2.0)
+[input]
+entrypoint = 0x80000400
+# Build-time image only: the retail ROM with every module image written past
+# 0x411E40 by make_build_rom.py. The module instructions are compressed in the
+# retail ROM, and N64Recomp can only compile them in plaintext. The game still
+# runs from the untouched retail ROM.
+rom_file_path = "bomberman64u2.build.z64"
+symbols_file_path = "dump.toml"
+output_func_path = "RecompiledFuncs"
+
+[patches]
+# setjmp/longjmp are reimplemented on the host (src/main/stubs.cpp), so longjmp
+# must be ignored. N64Recomp's built-in list tries to skip it but does not, so
+# it is listed here under the name it is given after renaming.
+ignored = ["longjmp_recomp"]
+stubs = [
+    # Set and clear the cop0 WatchLo watchpoint (mtc0 $18), a debugging aid
+    # that N64Recomp does not translate and a recomp has no use for.
+    "func_80073EC0",
+    "func_80073EE0",
+    # The boss overlays' private copies of osGetCount (mfc0 $v0, Count); the
+    # patches route them to the real one (patches/count.c).
+    "ovl_boss_demon_9E60",
+    "ovl_boss_devil_ADD0",
+    "ovl_boss_angel_B4A0",
+]
+
+# The file layer waits for the game's own I/O process with
+#     while (busy) osYieldThread();
+# On the console this hands the CPU to the scheduler. Here the scheduler runs
+# each process as a host coroutine (src/game/scheduler.cpp), so each yield is
+# replaced with a call that suspends the current process.
+
+[[patches.instruction]]
+func = "func_80001824"
+vram = 0x800018E4
+value = 0x00000000 # jal osYieldThread -> nop
+
+[[patches.hook]]
+func = "func_80001824"
+before_vram = 0x800018E4
+text = "bm64u2_yield_process(rdram, ctx);"
+
+[[patches.instruction]]
+func = "func_80001CB0"
+vram = 0x80001CEC
+value = 0x00000000 # jal osYieldThread -> nop
+
+[[patches.hook]]
+func = "func_80001CB0"
+before_vram = 0x80001CEC
+text = "bm64u2_yield_process(rdram, ctx);"
+
+[[patches.instruction]]
+func = "func_80001CB0"
+vram = 0x80001D84
+value = 0x00000000 # jal osYieldThread -> nop
+
+[[patches.hook]]
+func = "func_80001CB0"
+before_vram = 0x80001D84
+text = "bm64u2_yield_process(rdram, ctx);"
+
+[[patches.instruction]]
+func = "func_80001E6C"
+vram = 0x80001EA0
+value = 0x00000000 # jal osYieldThread -> nop
+
+[[patches.hook]]
+func = "func_80001E6C"
+before_vram = 0x80001EA0
+text = "bm64u2_yield_process(rdram, ctx);"
+
+[[patches.instruction]]
+func = "func_800005E8"
+vram = 0x80000610
+value = 0x00000000 # jal osYieldThread -> nop
+
+[[patches.hook]]
+func = "func_800005E8"
+before_vram = 0x80000610
+text = "bm64u2_yield_process(rdram, ctx);"
+
+[[patches.instruction]]
+func = "func_80000698"
+vram = 0x800006C0
+value = 0x00000000 # jal osYieldThread -> nop
+
+[[patches.hook]]
+func = "func_80000698"
+before_vram = 0x800006C0
+text = "bm64u2_yield_process(rdram, ctx);"
+
+[[patches.instruction]]
+func = "func_80001A88"
+vram = 0x80001AD0
+value = 0x00000000 # jal osYieldThread -> nop
+
+[[patches.hook]]
+func = "func_80001A88"
+before_vram = 0x80001AD0
+text = "bm64u2_yield_process(rdram, ctx);"
+
+# Tag each model part's matrix with its node so RT64 interpolates every part
+# against itself (src/game/interpolation.cpp). $s1 is the node, $s2 the
+# display list the matrix load is about to be written to.
+[[patches.hook]]
+func = "func_8000E728"
+before_vram = 0x8000E848
+text = "bm64u2_tag_model_part(rdram, ctx);"
+
+# Rumble alongside the Controller Pak: after the game's osMotorInit call,
+# before it reads the result (src/game/input.cpp, bm64u2_motor_init_done).
+[[patches.hook]]
+func = "func_80006358"
+before_vram = 0x80006398
+text = "bm64u2_motor_init_done(rdram, ctx);"

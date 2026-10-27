@@ -1,0 +1,392 @@
+[
+ {
+  "name": "actor_main",
+  "id": 10,
+  "base": 1073741824,
+  "entry": 1073777852,
+  "size": 131520,
+  "bss": 16,
+  "block": 1048576,
+  "slot": 1
+ },
+ {
+  "name": "item_main",
+  "id": 11,
+  "base": 1090519040,
+  "entry": 1090522960,
+  "size": 29152,
+  "bss": 32,
+  "block": 1179648,
+  "slot": 1
+ },
+ {
+  "name": "blast_light",
+  "id": 69,
+  "base": 1107296256,
+  "entry": 1107307336,
+  "size": 17072,
+  "bss": 400,
+  "block": 1441792,
+  "slot": 6
+ },
+ {
+  "name": "blast_dark",
+  "id": 70,
+  "base": 1107296256,
+  "entry": 1107307416,
+  "size": 18224,
+  "bss": 400,
+  "block": 1441792,
+  "slot": 7
+ },
+ {
+  "name": "blast_elec",
+  "id": 68,
+  "base": 1107296256,
+  "entry": 1107307552,
+  "size": 17504,
+  "bss": 400,
+  "block": 1441792,
+  "slot": 5
+ },
+ {
+  "name": "blast_flame",
+  "id": 64,
+  "base": 1107296256,
+  "entry": 1107307772,
+  "size": 13920,
+  "bss": 400,
+  "block": 1441792,
+  "slot": 1
+ },
+ {
+  "name": "blast_ground",
+  "id": 67,
+  "base": 1107296256,
+  "entry": 1107308008,
+  "size": 18192,
+  "bss": 400,
+  "block": 1441792,
+  "slot": 4
+ },
+ {
+  "name": "blast_ice",
+  "id": 65,
+  "base": 1107296256,
+  "entry": 1107308348,
+  "size": 16320,
+  "bss": 400,
+  "block": 1441792,
+  "slot": 2
+ },
+ {
+  "name": "blast_wind",
+  "id": 66,
+  "base": 1107296256,
+  "entry": 1107308400,
+  "size": 17584,
+  "bss": 400,
+  "block": 1441792,
+  "slot": 3
+ },
+ {
+  "name": "boss_demon",
+  "id": 96,
+  "base": 1124073472,
+  "entry": 1124077392,
+  "size": 42992,
+  "bss": 2880,
+  "block": 1966080,
+  "slot": 1
+ },
+ {
+  "name": "boss_devil",
+  "id": 97,
+  "base": 1124073472,
+  "entry": 1124077392,
+  "size": 47008,
+  "bss": 2848,
+  "block": 1966080,
+  "slot": 2
+ },
+ {
+  "name": "boss_angel",
+  "id": 98,
+  "base": 1124073472,
+  "entry": 1124077392,
+  "size": 49136,
+  "bss": 2976,
+  "block": 1966080,
+  "slot": 3
+ },
+ {
+  "name": "enemy_world1",
+  "id": 80,
+  "base": 1124073472,
+  "entry": 1124109120,
+  "size": 42880,
+  "bss": 720,
+  "block": 1572864,
+  "slot": 1
+ },
+ {
+  "name": "enemy_world2",
+  "id": 81,
+  "base": 1124073472,
+  "entry": 1124109120,
+  "size": 43296,
+  "bss": 720,
+  "block": 1572864,
+  "slot": 2
+ },
+ {
+  "name": "enemy_world3",
+  "id": 82,
+  "base": 1124073472,
+  "entry": 1124109120,
+  "size": 42512,
+  "bss": 720,
+  "block": 1572864,
+  "slot": 3
+ },
+ {
+  "name": "enemy_world4",
+  "id": 83,
+  "base": 1124073472,
+  "entry": 1124109120,
+  "size": 40848,
+  "bss": 720,
+  "block": 1572864,
+  "slot": 4
+ },
+ {
+  "name": "enemy_world5",
+  "id": 84,
+  "base": 1124073472,
+  "entry": 1124109120,
+  "size": 41600,
+  "bss": 720,
+  "block": 1572864,
+  "slot": 5
+ },
+ {
+  "name": "enemy_world6",
+  "id": 85,
+  "base": 1124073472,
+  "entry": 1124109120,
+  "size": 42208,
+  "bss": 720,
+  "block": 1572864,
+  "slot": 6
+ },
+ {
+  "name": "enemy_world7",
+  "id": 86,
+  "base": 1124073472,
+  "entry": 1124109120,
+  "size": 41616,
+  "bss": 720,
+  "block": 1572864,
+  "slot": 7
+ },
+ {
+  "name": "enemy_world8",
+  "id": 87,
+  "base": 1124073472,
+  "entry": 1124109120,
+  "size": 44144,
+  "bss": 720,
+  "block": 1572864,
+  "slot": 8
+ },
+ {
+  "name": "enemy_battle",
+  "id": 88,
+  "base": 1124073472,
+  "entry": 1124109120,
+  "size": 39072,
+  "bss": 720,
+  "block": 1572864,
+  "slot": 9
+ },
+ {
+  "name": "coll_main",
+  "id": 14,
+  "base": 1140850688,
+  "entry": 1140858388,
+  "size": 27936,
+  "bss": 13184,
+  "block": 1245184,
+  "slot": 1
+ },
+ {
+  "name": "mobj_main",
+  "id": 15,
+  "base": 1157627904,
+  "entry": 1157644032,
+  "size": 77040,
+  "bss": 16,
+  "block": 1310720,
+  "slot": 1
+ },
+ {
+  "name": "demo_guide",
+  "id": 43,
+  "base": 1610612736,
+  "entry": 1610619508,
+  "size": 7424,
+  "bss": 0,
+  "block": 2359296,
+  "slot": 2
+ },
+ {
+  "name": "menu_file",
+  "id": 27,
+  "base": 1610612736,
+  "entry": 1610620124,
+  "size": 13152,
+  "bss": 272,
+  "block": 2228224,
+  "slot": 3
+ },
+ {
+  "name": "menu_card",
+  "id": 25,
+  "base": 1610612736,
+  "entry": 1610620316,
+  "size": 14144,
+  "bss": 288,
+  "block": 2228224,
+  "slot": 1
+ },
+ {
+  "name": "menu_custom",
+  "id": 31,
+  "base": 1610612736,
+  "entry": 1610622296,
+  "size": 22320,
+  "bss": 288,
+  "block": 2228224,
+  "slot": 5
+ },
+ {
+  "name": "menu_stage",
+  "id": 29,
+  "base": 1610612736,
+  "entry": 1610623640,
+  "size": 26928,
+  "bss": 272,
+  "block": 2228224,
+  "slot": 6
+ },
+ {
+  "name": "menu_title",
+  "id": 26,
+  "base": 1610612736,
+  "entry": 1610624604,
+  "size": 18880,
+  "bss": 288,
+  "block": 2228224,
+  "slot": 2
+ },
+ {
+  "name": "stage_world5",
+  "id": 38,
+  "base": 1610612736,
+  "entry": 1610626832,
+  "size": 15408,
+  "bss": 160,
+  "block": 2424832,
+  "slot": 5
+ },
+ {
+  "name": "menu_battle",
+  "id": 28,
+  "base": 1610612736,
+  "entry": 1610627080,
+  "size": 49216,
+  "bss": 448,
+  "block": 2228224,
+  "slot": 4
+ },
+ {
+  "name": "stage_world1",
+  "id": 34,
+  "base": 1610612736,
+  "entry": 1610628564,
+  "size": 16912,
+  "bss": 160,
+  "block": 2424832,
+  "slot": 1
+ },
+ {
+  "name": "stage_world6",
+  "id": 39,
+  "base": 1610612736,
+  "entry": 1610634912,
+  "size": 26080,
+  "bss": 384,
+  "block": 2424832,
+  "slot": 6
+ },
+ {
+  "name": "stage_world7",
+  "id": 40,
+  "base": 1610612736,
+  "entry": 1610634916,
+  "size": 23376,
+  "bss": 320,
+  "block": 2424832,
+  "slot": 7
+ },
+ {
+  "name": "stage_world2",
+  "id": 35,
+  "base": 1610612736,
+  "entry": 1610634936,
+  "size": 23728,
+  "bss": 288,
+  "block": 2424832,
+  "slot": 2
+ },
+ {
+  "name": "stage_world3",
+  "id": 36,
+  "base": 1610612736,
+  "entry": 1610638068,
+  "size": 27296,
+  "bss": 208,
+  "block": 2424832,
+  "slot": 3
+ },
+ {
+  "name": "demo_story",
+  "id": 32,
+  "base": 1610612736,
+  "entry": 1610639388,
+  "size": 31232,
+  "bss": 16,
+  "block": 2359296,
+  "slot": 1
+ },
+ {
+  "name": "stage_world4",
+  "id": 37,
+  "base": 1610612736,
+  "entry": 1610640780,
+  "size": 30000,
+  "bss": 176,
+  "block": 2424832,
+  "slot": 4
+ },
+ {
+  "name": "stage_world8",
+  "id": 41,
+  "base": 1610612736,
+  "entry": 1610649400,
+  "size": 38928,
+  "bss": 224,
+  "block": 2424832,
+  "slot": 8
+ }
+]

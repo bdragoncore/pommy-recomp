@@ -1,0 +1,20 @@
+# Config file for recompiling patches for Bomberman 64: The Second Attack! (US)
+
+[input]
+# Paths are relative to the location of this config file.
+elf_path = "patches/patches.elf"
+output_func_path = "RecompiledPatches"
+single_file_output = true
+# Allow absolute symbols (syms.ld) to be used as jump targets.
+use_absolute_symbols = true
+# Resolve the patch ELF's references against the same symbol table used for the
+# game recompilation. The patch functions must match entries there.
+func_reference_syms_file = "dump.toml"
+# Write the relocated patch binary; N64Recomp applies MIPS32 relocations here.
+output_binary_path = "patches/patches.bin"
+# clang emits many unpaired LO16 values that are harmless for this code.
+unpaired_lo16_warnings = false
+# Emit the export/event/manual-symbol tables used by librecomp.
+allow_exports = true
+# Every function in .recomp_patch must have a matching ROM symbol.
+strict_patch_mode = true
